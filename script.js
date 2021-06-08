@@ -17,6 +17,9 @@ console.log(actions[1]);
 
 actions.forEach((act)=>{
     act.addEventListener('click',()=>{
+        act.addEventListener('mouseenter',()=>{
+            act.style.textDecoration = 'underlined';
+        });
         let att = act.getAttribute('id');
         if(att==='dec'){
             counter.innerText -= 1;
